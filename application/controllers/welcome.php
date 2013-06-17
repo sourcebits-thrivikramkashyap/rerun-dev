@@ -31,13 +31,17 @@ class Welcome extends CI_Controller {
 		);
 		
 		$this->load->model('login_model');
-		$this->login_model->login($login_details);					
+		$this->login_model->login($login_details);		
+		$this->load->helper('url');		
+		redirect('/dashboard');			
 	}
 	
 	public function logout()
 	{
 		$this->load->library('session');
-		$this->session->destroy();
+		$this->session->sess_destroy();
+		$this->load->helper('url');		
+		redirect('/welcome/index');
 	}
 }
 

@@ -12,8 +12,6 @@ class Login_model extends CI_Model{
 		$this->db->query($sql);
 		
 		$this->load->library('session');
-		$this->session->set_userdata('email', $login_details['email']);		
-		$this->load->helper('url');
-		redirect('/dashboard');
+		$this->session->set_userdata('email', $login_details['email']);				
 	}
 }
