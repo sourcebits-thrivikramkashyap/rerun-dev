@@ -5,6 +5,16 @@ class payment_stream_new extends CI_Controller{
 	
 	public function index()
 	{
-		die("in payment_stream_new controller");
+		$this->_header();
+	}
+	
+	public function _header()
+	{
+		$this->load->library('session');
+		
+		$data = array(
+				'email' => $this->session->userdata('email')
+		);
+		$this->load->view('header', $data);		
 	}
 }

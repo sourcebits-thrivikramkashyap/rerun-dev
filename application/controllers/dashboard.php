@@ -2,8 +2,12 @@
 
 class dashboard extends CI_Controller{
 	
-	
 	public function index()
+	{
+		$this->_header();
+	}
+	
+	public function _header()
 	{
 		$this->load->library('session');
 		

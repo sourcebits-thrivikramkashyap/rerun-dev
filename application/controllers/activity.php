@@ -5,7 +5,17 @@ class activity extends CI_Controller{
 	
 	public function index()
 	{
-		die("in activity controller");
+		$this->_header();
+	}
+	
+	public function _header()
+	{
+		$this->load->library('session');
+		
+		$data = array(
+				'email' => $this->session->userdata('email')
+		);
+		$this->load->view('header', $data);		
 	}
 }
 

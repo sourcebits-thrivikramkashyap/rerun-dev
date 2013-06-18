@@ -10,7 +10,7 @@ background:#115599;
 
 .login-form{
 height:150px;
-width:230px;
+width:258px;
 text-align:center;
 padding:20px;
 }
@@ -30,11 +30,12 @@ echo validation_errors(); ?>
 
 <div class="login-center-content">
 	<div class="login-form">
-		<form action="/welcome/login" method="post">
+		<form action="/welcome/register_process" method="post">
 			email <input type="text" id="email" name="email" onfocus="if(this.value == 'email') this.value='';" onblur="if(this.value=='') this.value='email';" "value="email" /><br /><br />
 			password <input type="password" id="password" name="password" onfocus="if(this.value == 'password') this.value='';" onblur="if(this.value=='') this.value='password';"value="password" /><br><br>
-				<input type="submit" id="login" value="Log In">
+			password confirm<input type="password" id="password_confirm" name="password_confirm" onfocus="if(this.value == 'password') this.value='';" onblur="if(this.value=='') this.value='password';"value="password" /><br><br>
+				<input type="submit" id="register" value="Register">		
 	</form>
-	Not a registered user?<a href="/welcome/register">Sign Up</a>
+	
 	</div>
 </div>
