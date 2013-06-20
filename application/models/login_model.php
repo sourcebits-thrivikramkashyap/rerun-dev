@@ -16,6 +16,7 @@ class Login_model extends CI_Model{
 		$password_from_db = '';
 		foreach($query->result() as $row)
 		{
+			$userid = $row->userid;
 			$email_from_db = $row->email;
 			$password_from_db = $row->password;
 		}
@@ -25,6 +26,7 @@ class Login_model extends CI_Model{
 		{
 			$this->load->library('session');
 			$this->session->set_userdata('email', $login_details['email']);		
+			$this->session->set_userdata('userid', $userid);
 			return true;	
 		}		
 		else

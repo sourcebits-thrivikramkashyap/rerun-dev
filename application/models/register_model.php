@@ -5,6 +5,15 @@ class Register_model extends CI_Model{
 	public function register($details)
 	{
 		$email = $details['email'];
+		$sql = "SELECT * from users
+				WHERE email = '$email'";
+		$query = $this->db->query($sql);
+		
+		// if email already exists return false
+		if($query->num_rows()>0)
+		return false;
+		
+		$email = $details['email'];
 		$password = $details['password'];
 		$password_confirm = $details['password_confirm'];
 		

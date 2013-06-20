@@ -29,7 +29,7 @@ class Welcome extends CI_Controller {
 
 		$this->load->library('form_validation');			
 		
-		$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|max_length[40]');
 		$this->form_validation->set_rules('password', 'Password', 'required');		
 
 		if ($this->form_validation->run() == FALSE)

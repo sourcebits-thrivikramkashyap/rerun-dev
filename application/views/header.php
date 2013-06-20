@@ -6,10 +6,10 @@
 	background-color:blue;
 }
 
-ul{
+ul.navigation{
 	list-style-type:none;
 }
-li{
+.navigation li{
 	float:left;
 }
 
