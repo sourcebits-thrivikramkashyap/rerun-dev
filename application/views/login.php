@@ -35,9 +35,11 @@ echo validation_errors(); ?>
 <div class="login-center-content">
 	<div class="login-form">
 		<form action="/welcome/login" method="post">
-			email <input type="text" id="email" size="20" name="email" maxlength="30" onfocus="if(this.value == 'email') this.value='';" onblur="if(this.value=='') this.value='email';" "value="email" />
-			password <input type="password" id="password" size="20"  maxlength="30" name="password" onfocus="if(this.value == 'password') this.value='';" onblur="if(this.value=='') this.value='password';"value="password" /><br/>
-				<input type="submit" id="login" size="30" value="Log In">
+		<table>
+			<tr><td>email</td><td><input type="text" id="email" size="20" name="email" maxlength="30" onfocus="if(this.value == 'email') this.value='';" onblur="if(this.value=='') this.value='email';" "value="email" /></td></tr> 
+			<tr><td>password</td><td><input type="password" id="password" size="20"  maxlength="30" name="password" onfocus="if(this.value == 'password') this.value='';" onblur="if(this.value=='') this.value='password';"value="password" /><br/></td></tr> 
+			<tr><td></td><td><input type="submit" id="login" size="30" value="Log In"></td></tr>
+		</table>
 	</form>
 	Not a registered user?<a href="/welcome/register">Sign Up</a>
 	</div>

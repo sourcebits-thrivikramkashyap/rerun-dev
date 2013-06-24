@@ -16,4 +16,17 @@ class ajax extends CI_Controller{
 		$item_detail = $this->items_model->get_item_detail($item_name);
 		echo json_encode($item_detail);
 	}
+	
+	public function get_customer()
+	{
+		$customer_name = $_GET['customer_name'];
+		$this->load->model('customer_model');
+		$customer = $this->customer_model->get_customer_by_name($customer_name);
+		echo json_encode($customer);
+	}
+	
+	public function add_customer_to_payment_stream()
+	{
+		
+	}
 }

@@ -31,10 +31,12 @@ echo validation_errors(); ?>
 <div class="login-center-content">
 	<div class="login-form">
 		<form action="/welcome/register_process" method="post">
-			email <input type="text" id="email"  maxlength="30" name="email" onfocus="if(this.value == 'email') this.value='';" onblur="if(this.value=='') this.value='email';" "value="email" />
-			password <input type="password" id="password" maxlength="30" name="password" onfocus="if(this.value == 'password') this.value='';" onblur="if(this.value=='') this.value='password';"value="password" />
-			password confirm<input type="password" id="password_confirm" maxlength="30" name="password_confirm" onfocus="if(this.value == 'password') this.value='';" onblur="if(this.value=='') this.value='password';"value="password" /><br />
-				<input type="submit" id="register" value="Register">		
+		<table>
+			<tr><td>email</td> <td><input type="text" id="email"  maxlength="30" name="email" onfocus="if(this.value == 'email') this.value='';" onblur="if(this.value=='') this.value='email';" "value="email" /></td></tr>
+			<tr><td>password</td><td><input type="password" id="password" maxlength="30" name="password" onfocus="if(this.value == 'password') this.value='';" onblur="if(this.value=='') this.value='password';"value="password" /></td></tr>
+			<tr><td>password confirm</td><td><input type="password" id="password_confirm" maxlength="30" name="password_confirm" onfocus="if(this.value == 'password') this.value='';" onblur="if(this.value=='') this.value='password';"value="password" /></td></tr><br />
+			<td></td><td>	<input type="submit" id="register" value="Register">	</td>
+		</table>	
 	</form>
 	Already registered?<a href="/welcome/login"> Login</a>
 	

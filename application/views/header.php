@@ -13,7 +13,7 @@ ul.navigation{
 	float:left;
 }
 
-a{
+.links{
 	display:block;
 	width:100px;
 	color:white;
@@ -45,23 +45,23 @@ font-size:20px;
 	
 	<ul class="navigation">
 	<li>
-		<span>
-			<a class="dashboard" href="/dashboard">Dashboard</a>
+		<span class="links">
+			<a class="dashboard links" href="/dashboard">Dashboard</a>
 		</span>
 	</li>
 	<li>
-		<span>
-			<a class="payments" href="/payment_stream_new">Payments</a>
+		<span class="links">
+			<a class="payments links" href="/payment_stream_new">Payments</a>
 		</span>			
 	</li>
 	<li>
-		<span>
-			<a class="customers" href="/customer">Customers</a>
+		<span class="links">
+			<a class="customers links" href="/customer">Customers</a>
 		</span>
 	</li>	
 	<li>
-		<span>
-			<a class="activity" href="/activity">Activity</a>
+		<span class="links">
+			<a class="activity links" href="/activity">Activity</a>
 		</span>
 	</li>	
 	</ul>

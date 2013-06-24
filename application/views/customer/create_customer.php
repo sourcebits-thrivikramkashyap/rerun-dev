@@ -25,6 +25,20 @@ left:40%;
 }
 </style>
 
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("#stream_start_date").datepicker({
+		  showOn: "button",
+	      buttonImage: "/assets/images/calendar.gif",
+	      buttonImageOnly: true
+	});
+});
+</script>
+<input type="text" id="stream_start_date" name="stream_start_date"/>
 <div class="errors" >
 <?php echo validation_errors(); ?>
 </div>

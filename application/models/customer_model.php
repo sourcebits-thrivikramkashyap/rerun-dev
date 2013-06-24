@@ -89,4 +89,14 @@ class Customer_Model extends CI_Model{
 		$query = $this->db->query($sql);
 		return $query->result();
 	}
+	
+	public function get_customer_by_name($customer_name)
+	{
+		$sql = "SELECT * 
+				FROM customers
+				WHERE first_name=".$this->db->escape($customer_name);
+		
+		$query = $this->db->query($sql);
+		return $query->result();
+	}
 }
